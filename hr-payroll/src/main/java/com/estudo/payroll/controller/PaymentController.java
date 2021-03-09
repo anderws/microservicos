@@ -13,11 +13,10 @@ import com.estudo.payroll.services.PaymentService;
 @RestController
 @RequestMapping("/payments")
 public class PaymentController {
-
 	
 	@Autowired
 	PaymentService service;
-	
+		
 	@GetMapping("/{workerId}/days/{days}")
 	public ResponseEntity<Payment> getPayment(@PathVariable Long workerId, @PathVariable Integer days){
 		Payment payment = service.getPayment(workerId, days);
