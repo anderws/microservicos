@@ -5,10 +5,10 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 server:
-  port: 8100
+  port: 8200
 spring:
   application:
-    name: hr-worker
+    name: hr-user
   datasource:
     driverClassName: org.h2.Driver
     password: ''
