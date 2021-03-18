@@ -22,7 +22,7 @@ public class WorkController {
 	@Autowired
 	private WorkRepository repository;
 	
-	
+	/**
 	@Value("${test.config}")
 	private String testConfig;
 	
@@ -32,18 +32,18 @@ public class WorkController {
 		return ResponseEntity.noContent().build();
 	}
 	
-	
+	**/
 	@GetMapping("/{id}")
 	public ResponseEntity<Worker> findById(@PathVariable Long id){
 		Optional<Worker> worker = repository.findById(id);
-		
+		/**
 		try {
 			Thread.sleep(3000L);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		**/
 		if(worker.isEmpty()) {
 			return ResponseEntity.notFound().build();
 		}

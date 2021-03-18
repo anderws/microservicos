@@ -1,0 +1,10 @@
+server:
+  port: 8100
+spring:
+  application:
+    name: hr-worker
+  cloud:
+    config:
+      uri: http://localhost:8888
+  profiles:
+    active: default
