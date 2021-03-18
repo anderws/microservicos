@@ -17,7 +17,11 @@ spring:
       - id: hr-worker
         uri: lb://hr-worker
         predicates:
-        - Path=/hr-worker/**          
+        - Path=/hr-worker/**     
+      - id: hr-user
+        uri: lb://hr-user
+        predicates:
+        - Path=/hr-user/**         
   devtools:
     restart:
       log-condition-evaluation-delta: false
